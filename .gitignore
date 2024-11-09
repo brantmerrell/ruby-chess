@@ -1,0 +1,6 @@
+*.txt
+*.sh
+*.swp
+*.md
+*.lock
+.gitignore
