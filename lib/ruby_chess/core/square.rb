@@ -3,7 +3,7 @@ module RubyChess
     class Square
       RANKS = ('1'..'8').to_a.freeze
       FILES = ('a'..'h').to_a.freeze
-      NAMES = FILES.product(RANKS).map(&:join).freeze
+      NAMES = RANKS.map { |rank| FILES.map { |file| file + rank } }.flatten.freeze
       
       class << self
         def from_name(name)
